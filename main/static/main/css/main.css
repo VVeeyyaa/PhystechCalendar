@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+@keyframes color-2 {
+from {color: #00d2cf;}
+to {color: #0db5b3;}
+}
+
+@keyframes color-1 {
+from {color: #0db5b3;}
+to {color: #00d2cf;}
+}
+
+@keyframes color-3 {
+from {color: #4c79bf;}
+to {color: #3f67a6;}
+}
+
+@keyframes color-4 {
+from {color: #3f67a6;}
+to {color: #4c79bf;}
+}
+
+@keyframes color-5 {
+from {color: #319b91;}
+to {color: #2b877e;}
+}
+
+@keyframes color-6 {
+from {color: #2b877e;}
+to {color: #319b91;}
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: #0074c0;
+    -webkit-font-smoothing: antialiased;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.wrapper{
+    display: flex;
+    min-height: 100%;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1640px;
+    margin: 0 auto;
+    padding: 0 2% 0 2%;
+}
+
+.header {
+    background-color: #005087;
+}
+
+.header__logo {
+    font-size: 50px;
+    text-decoration: none;
+    color: #ffffff;
+    margin: 5px 0 5px 0;
+}
+
+.header__row {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+.menu__link{
+    color: #ffffff;
+}
+
+.calendar {
+    width: 56vw;
+    margin: 30px 0 30px 0;
+    align-items: center;
+    max-width: 918px;
+}
+
+.three-block {
+    display: flex;
+}
+
+.content {
+    width: 39%;
+    margin: 28px auto;
+    align-items: center;
+    color: #ffffff;
+    font-size: 2.1vw;
+}
+
+.year {
+    display: flex;
+    position: relative;
+    z-index: 995;
+}
+
+.year > select {
+    display: block;
+    background: none;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: inherit;
+    font-size: 2.1vw;
+    white-space: nowrap;
+    text-align-last: right;
+    margin-top: 15%;
+    padding: 0.4vw 3.6% 0.4vw 1%;
+
+}
+
+.year .year-select {
+    color: #00d2cf;
+    animation: color-1  0.2s ease-in-out;
+    margin-left: 13%;
+}
+
+.year select:focus {
+    border: 0;
+    outline: none;
+}
+
+.year .year-select:hover {
+    color: #0db5b3;
+    animation: color-2  0.2s ease-in-out;
+
+}
+
+.year .month-select {
+    margin-left: 40%;
+    color: #4c79bf;
+    animation: color-4  0.2s ease-in-out;
+}
+
+.year .month-select:hover {
+    color: #3f67a6;
+    animation: color-3  0.2s ease-in-out;
+
+}
+
+.datas {
+    display: block;
+    position: absolute;
+    width: 56%;
+    max-width: 918px;
+    z-index: 2;
+}
+
+.triangle {
+	border-left: 0.7vw solid transparent;
+	border-right: 0.7vw solid transparent;
+    width: 0;
+	height: 0;
+    margin-top: 17.5%;
+    margin-left: -3.5%;
+    z-index: 994
+}
+
+#triangle-year {
+	border-top: 1.19vw solid #00d2cf;
+}
+
+#triangle-month {
+    border-top: 1.19vw solid #4c79bf;
+}
+
+.menu__link {
+    content: '';
+}
+
+.calendar__numbers {
+    display: table;
+    position: relative;
+    z-index: 995;
+    font-size: 2.1vw;
+    margin-top: 7vw;
+    padding: 0 3vw 0 3vw;
+    width: 100%;
+    border-spacing: 0;
+    color: #00d2cf;
+}
+
+.calendar__numbers .holiday {
+    color: #319b91;
+    animation: color-6  0.2s ease-in-out;
+}
+
+.calendar__numbers .holiday:hover {
+    color: #2b877e;
+    animation: color-5  0.2s ease-in-out;
+}
+
+.calendar__numbers td {
+    margin: 0;
+    width: 14.2857%;
+    padding-top: 0.9vw;
+    text-align: center;
+    animation: color-1  0.2s ease-in-out;
+}
+
+.calendar__numbers td:hover {
+    color: #0db5b3;
+    animation: color-2  0.2s ease-in-out;
+}
+
+@media (min-width: 1640px) {
+    .triangle {
+        margin-top: 158px;
+        border-left: 11.5px solid transparent;
+        border-right: 11.5px solid transparent;
+    }
+
+    #triangle-year {
+        border-top: 19.5px solid #00d2cf;
+    }
+
+    #triangle-month {
+        border-top: 19.5px solid #4c79bf;
+    }
+
+    .calendar__numbers {
+        font-size: 34.44px;
+        margin: 114.8px 0 0 0;
+        padding: 0 49.2px 0 49.2px;
+        max-width: 918px;
+    }
+    .calendar__numbers td {
+        padding: 14.8px 32.8px 0 32.8px;
+    }
+    .year select {
+        font-size: 34.44px;
+        padding: 6.56px 3.5% 6.56px 1%;
+    }
+
+    .year option {
+        font-size: 34.44px;
+    }
+    .content {
+        font-size: 34.44px;
+    }
+}
+
+@media (min-width: 426px)
+    and (max-width: 768px){
+    .header__logo {
+        font-size: 30px;
+    }
+
+    .header__row {
+        height: 50px;
+    }
+
+    .content {
+        margin-top: 3vw;
+    }
+
+    .calendar {
+        margin: 3vw 0 0 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .datas {
+        width: 96%;
+        display: block;
+    }
+
+    .content {
+        width: 100%;
+        display: block;
+        margin-top: 8vw;
+        font-size: 5vw;
+    }
+
+    .three-block {
+        display: block;
+    }
+
+    .header__logo {
+        font-size: 9vw;
+    }
+
+    .header__row {
+        height: 14vw;
+    }
+
+    .calendar {
+        margin: 3vw 0 0 0;
+        width: 100%;
+    }
+
+    .calendar__numbers {
+        font-size: 4.4vw;
+        margin-top: 11vw;
+        padding: 0 5vw 0 5vw;
+    }
+
+    .year > select {
+        font-size: 4.4vw;
+        white-space: nowrap;
+        direction: rtl;
+        margin-top: 16%;
+        padding: 0.4vw 3.6% 0.4vw 1%;
+
+    }
+
+    .year .month-select {
+        margin-left: 36.5%;
+    }
+
+    .triangle {
+        border-left: 1.3vw solid transparent;
+        border-right: 1.3vw solid transparent;
+        margin-top: 18.7%;
+        margin-left: -3.5%;
+    }
+
+    #triangle-year {
+        border-top: 2.21vw solid #00d2cf;
+    }
+
+    #triangle-month {
+        border-top: 2.21vw solid #4c79bf;
+    }
+}

@@ -1,0 +1,92 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+    Физтех.Календарь
+{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <div class="three-block">
+            <div class="calendar">
+                <div class="datas">
+                    <img src="{% static 'main/img/calendar.svg' %}">
+                </div>
+                <div class="year">
+                    <select name="year" id="" class="year-select">
+                        <option selected value="2021">2021</option>
+                        <option value="2022">2022</option>
+                    </select>
+                    <div class="triangle" id="triangle-year"></div>
+                    <select name="year" id="" class="month-select">
+                        <option selected value="2021">Сентябрь</option>
+                        <option value="2022">Октябрь</option>
+                    </select>
+                    <div class="triangle" id="triangle-month"></div>
+                </div>
+                <table class="calendar__numbers">
+                    <tr>
+                        <td>5</td>
+                        <td>66</td>
+                        <td>5</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td class="holiday">66</td>
+                        <td class="holiday">1</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>66</td>
+                        <td>5</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td class="holiday">66</td>
+                        <td class="holiday">66</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>66</td>
+                        <td>5</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td class="holiday">66</td>
+                        <td class="holiday">66</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>66</td>
+                        <td>5</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td class="holiday">66</td>
+                        <td class="holiday">66</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>66</td>
+                        <td>5</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td class="holiday">66</td>
+                        <td class="holiday">66</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>66</td>
+                        <td>5</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td class="holiday">66</td>
+                        <td class="holiday">66</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque deleniti deserunt dicta eos exercitationem
+                expedita harum impedit ipsum labore libero, magni mollitia nam obcaecati perspiciatis qui reiciendis saepe sunt vel!
+
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
